@@ -1,0 +1,40 @@
+
+GET http://localhost:3000/users HTTP/1.1
+content-type: application/json
+
+
+### Get User
+GET http://localhost:3000/users/1 HTTP/1.1
+content-type: application/json
+
+
+### Create User
+POST http://localhost:3000/users HTTP/1.1
+content-type: application/json
+
+{
+  "firstName": "John Doe",
+  "lastName": "Doe",
+  "email": "johndeo@gmail.com",
+  "password": "123456",
+  "address": {
+    "address1": "123 Main St",
+    "address2": "Apt 1",
+    "city": "New York",
+    "state": "NY",
+    "zip": "10001"
+  }
+}
+
+### Update User
+PATCH http://localhost:3000/users/1 HTTP/1.1
+content-type: application/json
+
+{
+  "firstName": "John Doe",
+  "lastName": "Doe"
+}
+
+### Delete User
+DELETE http://localhost:3000/users/1 HTTP/1.1
+content-type: application/json
